@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法律小知識 - 丘煥法律師行 Khoo & Co. Lawyers</title>
+    <style>
+        :root {
+            --primary-color: #0c2340;
+            --secondary-color: #c5a059;
+            --text-dark: #333333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft JhengHei', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .page-header h1 {
+            font-size: 28px;
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-card {
+            background-color: var(--white);
+            border-radius: 6px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .faq-card h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-card h2 span {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        .faq-card p {
+            font-size: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #081627;
+            color: #8fa0b5;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            margin-top: 50px;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            nav { margin-top: 15px; }
+            nav a { margin: 0 10px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導航欄 -->
+    <header>
+        <div class="logo">丘煥法律師行 <span>Khoo & Co.</span></div>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="index.html#services">服務範疇</a>
+            <a href="index.html#compare">方案比較</a>
+            <a href="knowledge.html" style="color: var(--secondary-color);">法律小知識</a>
+            <a href="index.html#contact">聯絡我們</a>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>債務法律小知識 (Category: 法律小知識)</h1>
+        <p>為您解答關於破產、DRP 債務舒緩及 IVA 債務重組的常見法律疑問</p>
+    </div>
+
+    <!-- 法律小知識主內容 -->
+    <div class="container">
+        
+        <div class="faq-card">
+            <h2><span>Q1.</span> 什麼是 IVA 債務重組？它與破產有何分別？</h2>
+            <p>IVA 是一種具有法律效力的自願還款安排，需經法庭批准。最大優點在於申請人能免受破產帶來的職業限制，適合公務員、會計師及金融業等專業人士，且不需在憲報和報章上公開姓名。</p>
+        </div>
+
+        <div class="faq-card">
+            <h2><span>Q2.</span> 辦理 DRP 債務舒緩會影響現有工作嗎？</h2>
+            <p>基本上不會。DRP 完全不需要經過法庭程序，是律師直接向個別銀行及財務公司進行債務減息與延期重組談判，具有極高的私隱度，亦不會有憲報或任何公眾查冊紀錄，一般不影響現有職位。</p>
+        </div>
+
+        <div class="faq-card">
+            <h2><span>Q3.</span> 破產期滿後，紀錄會自動清除嗎？</h2>
+            <p>正常情況下，首次破產人士在 4 年期滿後，破產令會法定期滿自動解除。然而，如果需要申請銀行戶口洗底、移除信貸紀錄（環聯 TU）或特定商業用途，您必須主動向高等法院申請正式的《破產解除證明書》。</p>
+        </div>
+
+        <div class="faq-card">
+            <h2><span>Q4.</span> 為什麼建議由專業律師代辦，而不是坊間中介？</h2>
+            <p>香港《破產條例》規定涉及法庭程序及法定談判需由具備專業資格的法律人員操作。許多不良中介會隱瞞暗藏的行政費。委託信譽良好的律師行辦理，收費公開透明、不成功不收費，更有合法的法律保障。</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 丘煥法律師行 Khoo & Co. Lawyers. 版權所有。本網頁內容僅供參考，不構成正式法律意見。</p>
+    </footer>
+
+    <a href="https://wa.me/85255664982?text=你好，我想查詢關於債務/破產法律服務" class="whatsapp-float" target="_blank">
+        💬 WhatsApp 隱密查詢
+    </a>
+
+</body>
+</html>

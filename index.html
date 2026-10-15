@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丘煥法律師事務所 Khoo & Co. Lawyers - 破產申請 | 債務舒緩DRP | 債務重組IVA</title>
+    <style>
+        /* 全域樣式設定 */
+        :root {
+            --primary-color: #0c2340; /* 專業海軍藍 */
+            --secondary-color: #c5a059; /* 尊貴金銅色 */
+            --text-dark: #333333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft JhengHei', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* 導航欄 */
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* 橫幅區 */
+        .hero {
+            background: linear-gradient(rgba(12, 35, 64, 0.85), rgba(12, 35, 64, 0.85)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--white);
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #b38f48;
+            color: var(--white);
+        }
+
+        /* 通用區塊樣式 */
+        section {
+            padding: 70px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        /* 核心服務區塊 */
+        .services-section {
+            background-color: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--secondary-color);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .service-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            border-top: 1px dashed #e0e0e0;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn-more {
+            display: inline-block;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-more:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        /* 對比表格區塊 */
+        .comparison-section {
+            background-color: var(--white);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--white);
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        tr:nth-child(even) {
+            background-color: #fcfcfc;
+        }
+
+        /* 聯絡與資訊 */
+        .contact-section {
+            background-color: var(--bg-light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+        }
+
+        .firm-profile {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 6px;
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 25px;
+        }
+
+        .firm-profile h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .firm-profile p {
+            font-size: 15px;
+            color: #444;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .disclaimer {
+            background-color: #fff9e6;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            font-size: 13px;
+            color: #666;
+            border-radius: 4px;
+        }
+
+        /* 頁腳 */
+        footer {
+            background-color: #081627;
+            color: #8fa0b5;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        /* WhatsApp 浮動按鈕 */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+        }
+
+        /* 媒體查詢：行動版排版優化 */
+        @media (max-width: 768px) {
+            /* 優化手機版導航欄：縮小間距與字體，避免過度撐高 */
+            header { 
+                flex-direction: column; 
+                padding: 10px 3%; 
+            }
+            .logo { 
+                font-size: 18px; 
+                margin-bottom: 5px; 
+            }
+            nav { 
+                margin-top: 5px; 
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a { 
+                margin: 4px 8px; 
+                font-size: 13px; 
+            }
+
+            /* 調整手機版橫幅：增加頂部內距，確保文字不被置頂的導航欄遮擋 */
+            .hero { 
+                height: auto;
+                padding: 110px 20px 60px 20px; /* 110px 確保預留足夠的手機版 Header 空間 */
+            }
+            .hero h1 { font-size: 26px; }
+            .hero p { font-size: 15px; margin-bottom: 20px; }
+            
+            .cta-buttons a { display: block; margin: 10px 0; }
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導航欄 -->
+    <header>
+        <div class="logo">丘煥法律師事務所 <span>Khoo & Co. Lawyers</span></div>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="#services">服務範疇</a>
+            <a href="#compare">方案比較</a>
+            <a href="knowledge.html">法律小知識</a>
+            <a href="#contact">關於我們及聯絡</a>
+        </nav>
+    </header>
+
+    <!-- 橫幅區 -->
+    <section class="hero">
+        <h1>逆境同行 · 重迎財務自由</h1>
+        <p>專注個人破產、DRP 債務舒緩、IVA 債務重組及破產解除證明書。資深法律團隊一對一跟進，助您依法合法重組債務，重過正常生活。</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/85255664982?text=你好，我想查詢關於債務/破產法律服務" class="btn-primary" target="_blank">預約免費初步諮詢</a>
+        </div>
+    </section>
+
+    <!-- 核心服務區塊 -->
+    <section id="services" class="services-section">
+        <h2 class="section-title">核心服務範疇</h2>
+        <div class="services-grid">
+            
+            <!-- 破產申請卡片 -->
+            <div class="service-card">
+                <div>
+                    <h3>破產申請</h3>
+                    <p>《破產條例》給予欠債人士的法律保護傘。一旦啟動，所有針對債務人的催收與錢債官司將依法凍結。由律師代表出席法院及代辦繁複手續，免除您的心理壓力。</p>
+                </div>
+                <div>
+                    <div class="service-price">參考費用: $14,500 起 (連規費)</div>
+                    <a href="bankruptcy.html" class="btn-more">了解詳細流程與影響 ➔</a>
+                </div>
+            </div>
+
+            <!-- 債務舒緩 DRP 卡片 -->
+            <div class="service-card">
+                <div>
+                    <h3>債務舒緩 DRP</h3>
+                    <p>不經法庭的「債務通融計劃」。由律師直接與銀行或財務公司協商減息及減少每月供款。具高保密性，快至一個月內開始全新還款安排。</p>
+                </div>
+                <div>
+                    <div class="service-price">參考費用: $4,500 - $9,500</div>
+                    <a href="drp.html" class="btn-more">了解詳細流程與影響 ➔</a>
+                </div>
+            </div>
+
+            <!-- 債務重組 IVA 卡片 -->
+            <div class="service-card">
+                <div>
+                    <h3>債務重組 IVA</h3>
+                    <p>《破產條例》下的法定程序。由法庭認可代名人（如律師）協助向法庭及債權人提出建議書，全面重整十萬至百萬債項。適合需要保留專業資格之人士。</p>
+                </div>
+                <div>
+                    <div class="service-price">參考費用: 視乎個案 (可分期)</div>
+                    <a href="iva.html" class="btn-more">了解詳細流程與影響 ➔</a>
+                </div>
+            </div>
+
+            <!-- 破產解除證明書卡片 -->
+            <div class="service-card">
+                <div>
+                    <h3>破產解除證明書</h3>
+                    <p>破產期滿後正式「洗底」重獲新生的法定憑證。律師行全面代辦：向破產管理署取得不反對申請書、準備誓章、高等法院存檔及代領正式證明書。</p>
+                </div>
+                <div>
+                    <div class="service-price">參考費用: $1,500</div>
+                    <a href="discharge.html" class="btn-more">了解詳細流程與影響 ➔</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 對比表格區塊 -->
+    <section id="compare" class="comparison-section">
+        <h2 class="section-title">方案快速比較</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>特性 / 方案</th>
+                        <th>個人破產</th>
+                        <th>DRP 債務舒緩</th>
+                        <th>IVA 債務重組</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>經由法庭</strong></td>
+                        <td>⚖️ 經高等法院頒布令</td>
+                        <td>❌ 毋須（純銀行/財務公司批核）</td>
+                        <td>⚖️ 經法庭程序及命令</td>
+                    </tr>
+                    <tr>
+                        <td><strong>辦理速度</strong></td>
+                        <td>⚖️ 按法庭與管理署進度</td>
+                        <td>⚡ 極快（快至一個月內完成）</td>
+                        <td>⏳ 較慢（最少需 4 個月以上）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>保密性</strong></td>
+                        <td>⚠️ 需刊登憲報，有公開紀錄</td>
+                        <td>🔒 高（毋須公開，無公眾紀錄）</td>
+                        <td>⚠️ 需刊登憲報及公眾查冊</td>
+                    </tr>
+                    <tr>
+                        <td><strong>職業限制</strong></td>
+                        <td>⚠️ 有（部分公務員、金融、專業資格受限）</td>
+                        <td>❌ 無（大部分行業不受影響）</td>
+                        <td>❌ 無（多數能保留專業資格）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 關於我們與聯絡我們（合流區塊） -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">關於我們及聯絡</h2>
+        <div class="contact-container">
+            
+            <!-- 左側：事務所簡介與聯絡方式 -->
+            <div>
+                <div class="firm-profile">
+                    <h3>事務所簡介</h3>
+                    <p>丘煥法律師事務所成立於2014年，專注於商業及金融法律服務。憑藉專業、實幹的服務態度，我們致力為客戶提供專業及靈活的法律意見、策略及方案。我們亦是多家在香港聯合交易所上市的公司和證監會持牌註冊機構的常務法律顧問，對於處理香港各個監管機構的要求及合規工作等，擁有豐富經驗。</p>
+                </div>
+
+                <div class="contact-info" style="padding-left: 10px;">
+                    <h3>聯絡資料</h3>
+                    <p><strong>辦事處地址：</strong> 香港皇后大道251號太興中心二座十五及十六樓</p>
+                    <p><strong>諮詢熱線：</strong> +852 5566 4982</p>
+                    <p><strong>傳真號碼：</strong> +852 3565 5042</p>
+                    <p><strong>電子郵件：</strong> wk@khooco.com.hk</p>
+                    <br>
+                    <h3>辦公時間</h3>
+                    <p><strong>星期一至五：</strong> 10:00AM - 6:00PM (午休 1:00PM - 2:15PM)</p>
+                    <p><strong>星期六：</strong> 10:00AM - 1:00PM （星期日及公眾假期休息）</p>
+                </div>
+            </div>
+
+            <!-- 右側：重要聲明 -->
+            <div style="display: flex; align-items: flex-start; margin-top: 4px;">
+                <div class="disclaimer">
+                    <strong>重要收費聲明：</strong><br><br>
+                    本網頁所列之各項服務費用乃「一般常見基本收費」，僅供初步參考，並不具備法律約束力。最終收費會因應案件的複雜程度、各債權人機構數目、以及處理程序中需花費的實際律師工時而有所調整。<br><br>
+                    一切收費均以律師親自了解案情、評估風險並簽署正式法律委託書後的書面報價為準。
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 丘煥法律師事務所 Khoo & Co. Lawyers. 版權所有。本網頁內容僅供參考，不構成正式法律意見。</p>
+    </footer>
+
+    <a href="https://wa.me/85255664982?text=你好，我想查詢關於債務/破產法律服務" class="whatsapp-float" target="_blank">
+        💬 WhatsApp 隱密查詢
+    </a>
+
+</body>
+</html>
